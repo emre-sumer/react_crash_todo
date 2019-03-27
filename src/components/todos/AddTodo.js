@@ -14,10 +14,12 @@ export class AddTodo extends Component {
     onSubmit = (e) => {
         e.preventDefault();
     
+        if(this.state.title.length){
           this.props.addTodo(this.state.title);
-   
+          this.setState({title:''});
+        }
         
-        this.setState({title:''});
+
     }
 
   render() {
