@@ -14,7 +14,7 @@ export class AddTodo extends Component {
     onSubmit = (e) => {
         e.preventDefault();
     
-        if(this.state.title.length){
+        if(this.state.title[0]&&this.state.title[0].length>0){
           this.props.addTodo(this.state.title);
           this.setState({title:''});
         }
